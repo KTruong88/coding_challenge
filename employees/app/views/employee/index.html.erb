@@ -1,0 +1,40 @@
+<h1 class="title">Table made of employee names</h1>
+
+<div class="tabletop">
+  <%= @res[0...110].map { |employee| employee['name'] } %>
+</div>
+<div class="tabletop two">
+  <%= @res[100...212].map { |employee| employee['name'] } %>
+</div>
+<div class="tabletop three">
+  <%= @res[200...313].map { |employee| employee['name'] } %>
+</div>
+<div class="tabletop four">
+  <%= @res[300...410].map { |employee| employee['name'] } %>
+</div>
+<div class="leg">
+  <%= @res[50...70].map { |employee| employee['name'] } %>
+</div>
+<div class="leg leg2">
+  <%= @res[50...70].map { |employee| employee['name'] } %>
+</div>
+<div class="leg leg3">
+  <%= @res[50...70].map { |employee| employee['name'] } %>
+</div>
+<div class="leg leg4">
+  <%= @res[50...57].map { |employee| employee['name'] } %>
+</div>
+
+<!-- Tile/Card view for smaller viewport -->
+
+<h1 class="cards-title">Employee Information</h1>
+<div class="wrapper">
+  <% @res.map do |employee| %>
+    <div class="cards">
+      Name: <%= employee["name"] %> <br>
+      Department: <%= employee["department"] %> <br>
+      Job Title: <%= employee["job_titles"] %> <br>
+      Annual Salary: <%= employee["annual_salary"] %> <br>
+    </div>
+  <% end %>
+</div>
